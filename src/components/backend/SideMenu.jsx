@@ -70,6 +70,11 @@ function SideMenu() {
                 <div data-i18n="Main Categories">Main Categories</div>
               </Link>
             </li>
+            <li className="menu-item">
+              <Link to="/admin/sub-categories" className="menu-link">
+                <div data-i18n="Sub Categories">Sub Categories</div>
+              </Link>
+            </li>
           </ul>
         </li>
 

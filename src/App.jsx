@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AdminLogin from "./pages/backend/auth/AdminLogin";
 import Dashboard from "./pages/backend/Dashboard";
 import MainCategories from "./pages/backend/main_categories/MainCategories";
+import SubCategories from "./pages/backend/subcategories/SubCategories";
 import BackendLayout from "./pages/BackendLayout";
 import Homepage from "./pages/frontend/Homepage";
 
@@ -14,6 +15,7 @@ function App() {
         <Route path="/admin" element={<BackendLayout />}>
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="main-categories" element={<MainCategories />} />
+          <Route path="sub-categories" element={<SubCategories />} />
         </Route>
       </Routes>
     </BrowserRouter>

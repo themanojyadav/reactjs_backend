@@ -5,7 +5,7 @@ import { BiEdit, BiFileBlank, BiPlus, BiTrash } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import Loading from "../Loading";
 
-function MainCategories() {
+function SubCategories() {
   const [isLoaded, setIsLoaded] = useState(true);
   const [categoriesData, setCategoriesData] = useState([]);
 
@@ -18,6 +18,7 @@ function MainCategories() {
           return {
             id: index + 1,
             title: cat,
+            category_name: cat,
             description:
               "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
           };
@@ -39,7 +40,7 @@ function MainCategories() {
         <div className="card">
           <div className="card-header d-flex align-items-center justify-content-between">
             <h5 className="card-title m-0 me-2">
-              <BiFileBlank /> Main Categories
+              <BiFileBlank /> Sub Categories
             </h5>
             <div>
               <Link to="/main-categories/add" className="btn btn-primary">
@@ -52,6 +53,7 @@ function MainCategories() {
               <thead>
                 <tr>
                   <th>S. No.</th>
+                  <th>Sub Category</th>
                   <th>Category Name</th>
                   <th>Description</th>
                   <th>Action</th>
@@ -64,6 +66,7 @@ function MainCategories() {
                       <tr key={category.id}>
                         <td>{category.id}</td>
                         <td>{category.title}</td>
+                        <td>{category.category_name}</td>
                         <td>{category.description}</td>
                         <td>
                           <button className="btn btn-warning btn-sm me-1">
@@ -90,4 +93,4 @@ function MainCategories() {
   );
 }
 
-export default MainCategories;
+export default SubCategories;
